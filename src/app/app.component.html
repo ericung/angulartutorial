@@ -227,6 +227,16 @@
       </svg>
       <h1>Hello, {{ title }}</h1>
       <p>Congratulations! Your app is running. 🎉</p>
+      <section>
+        <form>
+          <input type="text" placeholder="Filter by city">
+          <button class="primary" type="button">Search</button>
+        </form>
+      </section>
+      <app-housing-location 
+        *ngFor="let housingLocation of housingLocationList"
+        [housingLocation]="housingLocation">
+      </app-housing-location>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
